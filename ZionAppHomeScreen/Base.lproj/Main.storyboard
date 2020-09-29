@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zzy-ZW-Vi4">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="xTA-u7-cj6">
+            <objects>
+                <tabBarController id="Zzy-ZW-Vi4" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bRb-4o-y7Q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="MTJ-jx-CNy" kind="relationship" relationship="viewControllers" id="y5Z-Aq-yuj"/>
+                        <segue destination="q7n-Hm-urP" kind="relationship" relationship="viewControllers" id="Qhr-Vc-iys"/>
+                        <segue destination="uso-RR-LJj" kind="relationship" relationship="viewControllers" id="2OX-S8-n3b"/>
+                        <segue destination="PHp-lV-CJZ" kind="relationship" relationship="viewControllers" id="n2z-rk-utA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mil-Sb-OJh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="59" y="-295"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="cEv-xL-Xor">
+            <objects>
+                <viewController id="MTJ-jx-CNy" customClass="HomeViewController" customModule="ZionAppHomeScreen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cph-CE-XjR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Va-iN-t6v" customClass="HomeMainView" customModule="ZionAppHomeScreen" customModuleProvider="target">
+                                <rect key="frame" x="20" y="44" width="374" height="769"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="X1d-oa-aEQ"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="X1d-oa-aEQ" firstAttribute="bottom" secondItem="0Va-iN-t6v" secondAttribute="bottom" id="0bN-8L-Mwa"/>
+                            <constraint firstItem="X1d-oa-aEQ" firstAttribute="trailing" secondItem="0Va-iN-t6v" secondAttribute="trailing" constant="20" id="8vf-bE-Ajl"/>
+                            <constraint firstItem="0Va-iN-t6v" firstAttribute="leading" secondItem="X1d-oa-aEQ" secondAttribute="leading" constant="20" id="RO5-eW-GdD"/>
+                            <constraint firstItem="0Va-iN-t6v" firstAttribute="top" secondItem="X1d-oa-aEQ" secondAttribute="top" id="fBR-In-9xJ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="HomeSymbol" selectedImage="HomeSymbol" id="FFS-LR-3Qx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ogc-FP-bQ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1071.0144927536232" y="720.53571428571422"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="9Qq-jB-6B9">
+            <objects>
+                <viewController id="q7n-Hm-urP" customClass="MapViewController" customModule="ZionAppHomeScreen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4v7-nb-Zqb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="J4c-9D-bAN"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="MapsSymbol" selectedImage="MapsSymbol" id="UBB-H4-aQn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ItO-9h-ZlX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-245" y="721"/>
+        </scene>
+        <!--Plan-->
+        <scene sceneID="tfu-V0-0kp">
+            <objects>
+                <viewController id="uso-RR-LJj" customClass="PlanViewController" customModule="ZionAppHomeScreen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YRy-Cb-2n0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="I7Z-ce-eoH"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Plan" image="PlanSymbol" selectedImage="PlanSymbol" id="kzF-uo-est"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yGp-6E-rXg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="655" y="737"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="cnF-bv-Gns">
+            <objects>
+                <viewController id="PHp-lV-CJZ" customClass="SettingsViewController" customModule="ZionAppHomeScreen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kB5-Pq-yRG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Xcl-wt-mSo"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="SettingsSymbol" selectedImage="SettingsSymbol" id="yvW-kV-9SZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tz3-3g-YGB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1530" y="738"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="HomeSymbol" width="16" height="14"/>
+        <image name="MapsSymbol" width="14" height="13"/>
+        <image name="PlanSymbol" width="9" height="15"/>
+        <image name="SettingsSymbol" width="14" height="14"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

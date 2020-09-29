@@ -1,0 +1,358 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		368B2B3825225E98000EEB35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368B2B3725225E98000EEB35 /* AppDelegate.swift */; };
+		368B2B3A25225E98000EEB35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368B2B3925225E98000EEB35 /* SceneDelegate.swift */; };
+		368B2B3F25225E98000EEB35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368B2B3D25225E98000EEB35 /* Main.storyboard */; };
+		368B2B4125225E98000EEB35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 368B2B4025225E98000EEB35 /* Assets.xcassets */; };
+		368B2B4425225E98000EEB35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368B2B4225225E98000EEB35 /* LaunchScreen.storyboard */; };
+		368B2B4E2522649D000EEB35 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368B2B4D2522649D000EEB35 /* HomeViewController.swift */; };
+		368B2B51252264C3000EEB35 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368B2B50252264C3000EEB35 /* MapViewController.swift */; };
+		368B2B54252264ED000EEB35 /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368B2B53252264ED000EEB35 /* PlanViewController.swift */; };
+		368B2B572522652F000EEB35 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368B2B562522652F000EEB35 /* SettingsViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		368B2B3425225E98000EEB35 /* ZionAppHomeScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZionAppHomeScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		368B2B3725225E98000EEB35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		368B2B3925225E98000EEB35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		368B2B3E25225E98000EEB35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		368B2B4025225E98000EEB35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		368B2B4325225E98000EEB35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		368B2B4525225E98000EEB35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		368B2B4D2522649D000EEB35 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		368B2B50252264C3000EEB35 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		368B2B53252264ED000EEB35 /* PlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
+		368B2B562522652F000EEB35 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		368B2B3125225E98000EEB35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		368B2B2B25225E98000EEB35 = {
+			isa = PBXGroup;
+			children = (
+				368B2B3625225E98000EEB35 /* ZionAppHomeScreen */,
+				368B2B3525225E98000EEB35 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		368B2B3525225E98000EEB35 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				368B2B3425225E98000EEB35 /* ZionAppHomeScreen.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		368B2B3625225E98000EEB35 /* ZionAppHomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				368B2B3725225E98000EEB35 /* AppDelegate.swift */,
+				368B2B3925225E98000EEB35 /* SceneDelegate.swift */,
+				368B2B3D25225E98000EEB35 /* Main.storyboard */,
+				368B2B4D2522649D000EEB35 /* HomeViewController.swift */,
+				368B2B50252264C3000EEB35 /* MapViewController.swift */,
+				368B2B53252264ED000EEB35 /* PlanViewController.swift */,
+				368B2B562522652F000EEB35 /* SettingsViewController.swift */,
+				368B2B4025225E98000EEB35 /* Assets.xcassets */,
+				368B2B4225225E98000EEB35 /* LaunchScreen.storyboard */,
+				368B2B4525225E98000EEB35 /* Info.plist */,
+			);
+			path = ZionAppHomeScreen;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		368B2B3325225E98000EEB35 /* ZionAppHomeScreen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 368B2B4825225E98000EEB35 /* Build configuration list for PBXNativeTarget "ZionAppHomeScreen" */;
+			buildPhases = (
+				368B2B3025225E98000EEB35 /* Sources */,
+				368B2B3125225E98000EEB35 /* Frameworks */,
+				368B2B3225225E98000EEB35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZionAppHomeScreen;
+			productName = ZionAppHomeScreen;
+			productReference = 368B2B3425225E98000EEB35 /* ZionAppHomeScreen.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		368B2B2C25225E98000EEB35 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					368B2B3325225E98000EEB35 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 368B2B2F25225E98000EEB35 /* Build configuration list for PBXProject "ZionAppHomeScreen" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 368B2B2B25225E98000EEB35;
+			productRefGroup = 368B2B3525225E98000EEB35 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				368B2B3325225E98000EEB35 /* ZionAppHomeScreen */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		368B2B3225225E98000EEB35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				368B2B4425225E98000EEB35 /* LaunchScreen.storyboard in Resources */,
+				368B2B4125225E98000EEB35 /* Assets.xcassets in Resources */,
+				368B2B3F25225E98000EEB35 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		368B2B3025225E98000EEB35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				368B2B572522652F000EEB35 /* SettingsViewController.swift in Sources */,
+				368B2B4E2522649D000EEB35 /* HomeViewController.swift in Sources */,
+				368B2B51252264C3000EEB35 /* MapViewController.swift in Sources */,
+				368B2B3825225E98000EEB35 /* AppDelegate.swift in Sources */,
+				368B2B3A25225E98000EEB35 /* SceneDelegate.swift in Sources */,
+				368B2B54252264ED000EEB35 /* PlanViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		368B2B3D25225E98000EEB35 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				368B2B3E25225E98000EEB35 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		368B2B4225225E98000EEB35 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				368B2B4325225E98000EEB35 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		368B2B4625225E98000EEB35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		368B2B4725225E98000EEB35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		368B2B4925225E98000EEB35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NXX3PX4442;
+				INFOPLIST_FILE = ZionAppHomeScreen/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.philtrunnell.ZionAppHomeScreen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		368B2B4A25225E98000EEB35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NXX3PX4442;
+				INFOPLIST_FILE = ZionAppHomeScreen/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.philtrunnell.ZionAppHomeScreen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		368B2B2F25225E98000EEB35 /* Build configuration list for PBXProject "ZionAppHomeScreen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				368B2B4625225E98000EEB35 /* Debug */,
+				368B2B4725225E98000EEB35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		368B2B4825225E98000EEB35 /* Build configuration list for PBXNativeTarget "ZionAppHomeScreen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				368B2B4925225E98000EEB35 /* Debug */,
+				368B2B4A25225E98000EEB35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 368B2B2C25225E98000EEB35 /* Project object */;
+}
