@@ -11,10 +11,24 @@ import UIKit
 class HomeMainView: UIView {
     
     @IBInspectable
-    var headerView = UIView()
+    var headerView = UIImageView(frame: CGRect(x: 0, y: 0, width: 414, height: 150))
     var leftStackView = UIStackView()
     var rightStackView = UIStackView()
     var headerLabelView = UILabel()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+//        headerView = UIImageView(frame: CGRect(x: 0, y: 0, width: 414, height: 150))
+//        headerView.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+//        
+//        self.addSubview(headerView)
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        awakeFromNib()
+    }
     
     
     func configureLeftStackView() {
@@ -34,10 +48,8 @@ class HomeMainView: UIView {
     
     func configureHeaderView() {
         self.addSubview(headerView)
-        headerView.frame = CGRect(x: 0, y: 0, width: 414, height: 150)
         headerView.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
-        
-        translatesAutoresizingMaskIntoConstraints = false
+        headerView.translatesAutoresizingMaskIntoConstraints = false
         headerView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         headerView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         headerView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true

@@ -11,13 +11,14 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    let homeView = HomeMainView()
+    let homeView = HomeMainView(frame: CGRect(x: 0, y: 0, width: 414, height: 611))
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(homeView)
+        self.view.addSubview(homeView)
         homeView.configureHeaderView()
-        homeView.configureLeftStackView()
+//        homeView.configureLeftStackView()
 //        configureRightStackView()
     }
 
