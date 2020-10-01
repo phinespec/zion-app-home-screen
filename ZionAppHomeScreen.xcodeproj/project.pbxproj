@@ -16,6 +16,7 @@
 		368B2B51252264C3000EEB35 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368B2B50252264C3000EEB35 /* MapViewController.swift */; };
 		368B2B54252264ED000EEB35 /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368B2B53252264ED000EEB35 /* PlanViewController.swift */; };
 		368B2B572522652F000EEB35 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368B2B562522652F000EEB35 /* SettingsViewController.swift */; };
+		CC9AC38125258D41003DEAEB /* HomeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9AC38025258D41003DEAEB /* HomeMainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		368B2B50252264C3000EEB35 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		368B2B53252264ED000EEB35 /* PlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
 		368B2B562522652F000EEB35 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CC9AC38025258D41003DEAEB /* HomeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,18 +64,51 @@
 		368B2B3625225E98000EEB35 /* ZionAppHomeScreen */ = {
 			isa = PBXGroup;
 			children = (
-				368B2B3725225E98000EEB35 /* AppDelegate.swift */,
-				368B2B3925225E98000EEB35 /* SceneDelegate.swift */,
-				368B2B3D25225E98000EEB35 /* Main.storyboard */,
+				CC9AC37E25258A71003DEAEB /* Supporting Files */,
+				CC9AC37D25258A66003DEAEB /* Model */,
+				CC9AC37C25258A5C003DEAEB /* View */,
+				CC9AC37B25258A54003DEAEB /* Controller */,
+				368B2B4525225E98000EEB35 /* Info.plist */,
+				368B2B4225225E98000EEB35 /* LaunchScreen.storyboard */,
+			);
+			path = ZionAppHomeScreen;
+			sourceTree = "<group>";
+		};
+		CC9AC37B25258A54003DEAEB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				368B2B4D2522649D000EEB35 /* HomeViewController.swift */,
 				368B2B50252264C3000EEB35 /* MapViewController.swift */,
 				368B2B53252264ED000EEB35 /* PlanViewController.swift */,
 				368B2B562522652F000EEB35 /* SettingsViewController.swift */,
-				368B2B4025225E98000EEB35 /* Assets.xcassets */,
-				368B2B4225225E98000EEB35 /* LaunchScreen.storyboard */,
-				368B2B4525225E98000EEB35 /* Info.plist */,
 			);
-			path = ZionAppHomeScreen;
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CC9AC37C25258A5C003DEAEB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				368B2B3D25225E98000EEB35 /* Main.storyboard */,
+				CC9AC38025258D41003DEAEB /* HomeMainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CC9AC37D25258A66003DEAEB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CC9AC37E25258A71003DEAEB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				368B2B4025225E98000EEB35 /* Assets.xcassets */,
+				368B2B3925225E98000EEB35 /* SceneDelegate.swift */,
+				368B2B3725225E98000EEB35 /* AppDelegate.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC9AC38125258D41003DEAEB /* HomeMainView.swift in Sources */,
 				368B2B572522652F000EEB35 /* SettingsViewController.swift in Sources */,
 				368B2B4E2522649D000EEB35 /* HomeViewController.swift in Sources */,
 				368B2B51252264C3000EEB35 /* MapViewController.swift in Sources */,
