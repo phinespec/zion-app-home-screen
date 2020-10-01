@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zzy-ZW-Vi4">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -26,17 +26,29 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mil-Sb-OJh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="59" y="-295"/>
+            <point key="canvasLocation" x="129" y="-293"/>
         </scene>
         <!--Home-->
         <scene sceneID="cEv-xL-Xor">
             <objects>
                 <viewController id="MTJ-jx-CNy" customClass="HomeViewController" customModule="ZionAppHomeScreen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cph-CE-XjR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TTu-NL-Wnr" customClass="HomeMainView" customModule="ZionAppHomeScreen" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="X1d-oa-aEQ"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TTu-NL-Wnr" firstAttribute="leading" secondItem="X1d-oa-aEQ" secondAttribute="leading" id="EEA-GN-QDT"/>
+                            <constraint firstItem="TTu-NL-Wnr" firstAttribute="trailing" secondItem="X1d-oa-aEQ" secondAttribute="trailing" id="MRg-mv-mmv"/>
+                            <constraint firstItem="TTu-NL-Wnr" firstAttribute="top" secondItem="X1d-oa-aEQ" secondAttribute="top" id="irT-9W-CKj"/>
+                            <constraint firstItem="TTu-NL-Wnr" firstAttribute="bottom" secondItem="X1d-oa-aEQ" secondAttribute="bottom" id="rYl-rd-Ndi"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="HomeSymbol" selectedImage="HomeSymbol" id="FFS-LR-3Qx"/>
                 </viewController>
@@ -49,8 +61,15 @@
             <objects>
                 <viewController id="q7n-Hm-urP" customClass="MapViewController" customModule="ZionAppHomeScreen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4v7-nb-Zqb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qto-mT-NYF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="J4c-9D-bAN"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
@@ -58,14 +77,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ItO-9h-ZlX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-245" y="721"/>
+            <point key="canvasLocation" x="-246.37681159420291" y="719.83695652173924"/>
         </scene>
         <!--Plan-->
         <scene sceneID="tfu-V0-0kp">
             <objects>
                 <viewController id="uso-RR-LJj" customClass="PlanViewController" customModule="ZionAppHomeScreen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YRy-Cb-2n0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="I7Z-ce-eoH"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
@@ -81,7 +100,7 @@
             <objects>
                 <viewController id="PHp-lV-CJZ" customClass="SettingsViewController" customModule="ZionAppHomeScreen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kB5-Pq-yRG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Xcl-wt-mSo"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -98,6 +117,9 @@
         <image name="MapsSymbol" width="14" height="13"/>
         <image name="PlanSymbol" width="9" height="15"/>
         <image name="SettingsSymbol" width="14" height="14"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
