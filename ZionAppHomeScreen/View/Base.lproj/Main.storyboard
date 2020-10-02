@@ -36,25 +36,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TTu-NL-Wnr" customClass="HomeMainView" customModule="ZionAppHomeScreen" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1cy-ly-QPE" customClass="RectangleView" customModule="ZionAppHomeScreen" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Greater Zion Region" translatesAutoresizingMaskIntoConstraints="NO" id="Zew-nB-5nd">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Zew-nB-5nd" secondAttribute="trailing" id="AJc-w2-Ed5"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zew-nB-5nd" secondAttribute="bottom" id="FvU-Xn-LXa"/>
+                                    <constraint firstItem="Zew-nB-5nd" firstAttribute="leading" secondItem="1cy-ly-QPE" secondAttribute="leading" id="Lyc-15-PbJ"/>
+                                    <constraint firstItem="Zew-nB-5nd" firstAttribute="top" secondItem="1cy-ly-QPE" secondAttribute="top" id="tBT-69-tfd"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="X1d-oa-aEQ"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="TTu-NL-Wnr" firstAttribute="leading" secondItem="X1d-oa-aEQ" secondAttribute="leading" id="EEA-GN-QDT"/>
-                            <constraint firstItem="TTu-NL-Wnr" firstAttribute="trailing" secondItem="X1d-oa-aEQ" secondAttribute="trailing" id="MRg-mv-mmv"/>
-                            <constraint firstItem="TTu-NL-Wnr" firstAttribute="top" secondItem="X1d-oa-aEQ" secondAttribute="top" id="irT-9W-CKj"/>
-                            <constraint firstItem="TTu-NL-Wnr" firstAttribute="bottom" secondItem="X1d-oa-aEQ" secondAttribute="bottom" id="rYl-rd-Ndi"/>
+                            <constraint firstItem="1cy-ly-QPE" firstAttribute="leading" secondItem="cph-CE-XjR" secondAttribute="leading" id="KZz-LP-8Tw"/>
+                            <constraint firstItem="X1d-oa-aEQ" firstAttribute="bottom" secondItem="1cy-ly-QPE" secondAttribute="bottom" constant="567" id="R85-Bi-X4d"/>
+                            <constraint firstAttribute="trailing" secondItem="1cy-ly-QPE" secondAttribute="trailing" id="Wyo-eS-4aT"/>
+                            <constraint firstItem="1cy-ly-QPE" firstAttribute="top" secondItem="cph-CE-XjR" secondAttribute="top" id="fhL-zt-4jH"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="HomeSymbol" selectedImage="HomeSymbol" id="FFS-LR-3Qx"/>
+                    <connections>
+                        <outlet property="header" destination="1cy-ly-QPE" id="6OC-Ur-jOv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ogc-FP-bQ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1071.0144927536232" y="720.53571428571422"/>
+            <point key="canvasLocation" x="-1071.0144927536232" y="719.83695652173924"/>
         </scene>
         <!--Map-->
         <scene sceneID="9Qq-jB-6B9">
@@ -63,13 +77,6 @@
                     <view key="view" contentMode="scaleToFill" id="4v7-nb-Zqb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qto-mT-NYF">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="J4c-9D-bAN"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
@@ -113,13 +120,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Greater Zion Region" width="276" height="183"/>
         <image name="HomeSymbol" width="16" height="14"/>
         <image name="MapsSymbol" width="14" height="13"/>
         <image name="PlanSymbol" width="9" height="15"/>
         <image name="SettingsSymbol" width="14" height="14"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
