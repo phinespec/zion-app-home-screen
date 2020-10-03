@@ -18,7 +18,7 @@
 		368B2B572522652F000EEB35 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368B2B562522652F000EEB35 /* SettingsViewController.swift */; };
 		36E564E425263C7D00E53CB9 /* RectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E564E325263C7D00E53CB9 /* RectangleView.swift */; };
 		36E564E725263C9600E53CB9 /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E564E625263C9600E53CB9 /* SquareView.swift */; };
-		CC9AC38125258D41003DEAEB /* HomeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9AC38025258D41003DEAEB /* HomeMainView.swift */; };
+		CC7565D125271D8A0074A548 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7565D025271D8A0074A548 /* AppData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +35,7 @@
 		368B2B562522652F000EEB35 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		36E564E325263C7D00E53CB9 /* RectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleView.swift; sourceTree = "<group>"; };
 		36E564E625263C9600E53CB9 /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
-		CC9AC38025258D41003DEAEB /* HomeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainView.swift; sourceTree = "<group>"; };
+		CC7565D025271D8A0074A548 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppData.swift; path = ZionAppHomeScreen/View/AppData.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				368B2B3D25225E98000EEB35 /* Main.storyboard */,
-				CC9AC38025258D41003DEAEB /* HomeMainView.swift */,
 				36E564E325263C7D00E53CB9 /* RectangleView.swift */,
 				36E564E625263C9600E53CB9 /* SquareView.swift */,
 			);
@@ -103,6 +102,7 @@
 		CC9AC37D25258A66003DEAEB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CC7565D025271D8A0074A548 /* AppData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,7 +187,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC9AC38125258D41003DEAEB /* HomeMainView.swift in Sources */,
 				368B2B572522652F000EEB35 /* SettingsViewController.swift in Sources */,
 				368B2B4E2522649D000EEB35 /* HomeViewController.swift in Sources */,
 				368B2B51252264C3000EEB35 /* MapViewController.swift in Sources */,
@@ -196,6 +195,7 @@
 				36E564E725263C9600E53CB9 /* SquareView.swift in Sources */,
 				36E564E425263C7D00E53CB9 /* RectangleView.swift in Sources */,
 				368B2B54252264ED000EEB35 /* PlanViewController.swift in Sources */,
+				CC7565D125271D8A0074A548 /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
