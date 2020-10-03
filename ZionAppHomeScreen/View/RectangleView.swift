@@ -17,30 +17,24 @@ class RectangleView: UIView {
         super.init(frame: frame)
     }
     
-    func addLabel(x: Int, y: Int, width: Int, height: Int, text: String, fontSize: Int) {
+    func getLabel(x: Int, y: Int, width: Int, height: Int, text: String, fontSize: Int) -> UILabel {
         let label = UILabel(frame: CGRect(x: x, y: y, width: width, height: height))
-        self.addSubview(label)
         label.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
         label.text = text.uppercased()
         label.textColor = .white
+        label.numberOfLines = 1
         label.adjustsFontSizeToFitWidth = true
         label.font = .boldSystemFont(ofSize: CGFloat(fontSize))
         label.textAlignment = .left
-
+        return label
     }
     
-   func addImage(named name: String) {
-        if let image = UIImage(named: name) {
-            let image = image
-            let iv = UIImageView(image: image)
-            self.addSubview(iv)
-            iv.contentMode = .scaleToFill
-            self.clipsToBounds = true
-            
-        } else {
-            print("No such image file")
-        }
-        
+    func getImage(named name: String) -> UIImageView {
+        let image = UIImage(named: name)
+        let iv = UIImageView(image: image)
+        iv.contentMode = .scaleToFill
+        self.clipsToBounds = true
+        return iv
     }
     
     
