@@ -70,7 +70,16 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        
+        configureLeftStackView()
+        configureRightStackView()
+        configureHeader()
+    }
+    
+//
+// <-- Functions for configuring the subviews go here --> //
+//
+    
+    private func configureLeftStackView() {
         view.addSubview(leftStackView)
         leftStackView.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 5).isActive = true
         leftStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5).isActive = true
@@ -88,7 +97,10 @@ class HomeViewController: UIViewController {
             let titleLabel = view.getLabel(x: titleLabelPositionX, y: titleLabelPositionY, width: titleLabelWidth, height: titleLabelHeight, text: data[index], fontSize: 19)
             view.addSubview(titleLabel)
         }
+    }
         
+        
+    private func configureRightStackView() {
         view.addSubview(rightStackView)
         rightStackView.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 5).isActive = true
         rightStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -5).isActive = true
@@ -115,7 +127,9 @@ class HomeViewController: UIViewController {
                 view.addSubview(weatherLabel)
             }
         }
+    }
         
+    private func configureHeader() {
         let headerLabel = header.getLabel(x: titleLabelPositionX, y: titleLabelPositionY / 2, width: titleLabelWidth * 2, height: titleLabelHeight, text: "Greater Zion Region", fontSize: 24)
         view.addSubview(headerLabel)
         
