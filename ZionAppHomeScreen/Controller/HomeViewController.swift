@@ -9,6 +9,7 @@ import Foundation
 
 import UIKit
 
+@IBDesignable
 class HomeViewController: UIViewController {
     
     // Number of images per stackview
@@ -17,27 +18,27 @@ class HomeViewController: UIViewController {
     
     // Title label frame configuration
     private var titleLabelPositionX = 10
-    private var titleLabelPositionY = 135
-    private var titleLabelWidth = 150
+    private var titleLabelPositionY = 145
+    private var titleLabelWidth = 200
     private var titleLabelHeight = 50
     
     // Weather label frame configuration
-    private var weatherLabelPositionX = 160
-    private var weatherLabelPositionY = 60
+    private var weatherLabelPositionX = 170
+    private var weatherLabelPositionY = 65
     private var weatherLabelWidth = 20
     private var weatherLabelHeight = 20
     
     // Weather image frame configuration
-    private var weatherImagePositionX = 160
-    private var weatherImagePositionY = 40
+    private var weatherImagePositionX = 170
+    private var weatherImagePositionY = 50
     private var weatherImageWidth = 20
     private var weatherImageHeight = 20
     
     
     // Live feed image frame configuration
-    private var liveFeedImagePositionX = 148
+    private var liveFeedImagePositionX = 145
     private var liveFeedImagePositionY = 5
-    private var liveFeedImageWidth = 40
+    private var liveFeedImageWidth = 50
     private var liveFeedImageHeight = 20
     
     // Getting data from our model
@@ -50,7 +51,7 @@ class HomeViewController: UIViewController {
         let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .vertical
-        stack.spacing = 10
+        stack.spacing = 5
         stack.distribution = .fillEqually
         return stack
     }()
@@ -59,7 +60,7 @@ class HomeViewController: UIViewController {
        let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .vertical
-        stack.spacing = 10
+        stack.spacing = 5
         stack.distribution = .fillEqually
         return stack
     }()
@@ -71,10 +72,10 @@ class HomeViewController: UIViewController {
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
         view.addSubview(leftStackView)
-        leftStackView.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 10).isActive = true
-        leftStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
-        leftStackView.widthAnchor.constraint(equalToConstant: (view.frame.width / 2) - 15).isActive = true
-        leftStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10).isActive = true
+        leftStackView.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 5).isActive = true
+        leftStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5).isActive = true
+        leftStackView.widthAnchor.constraint(equalToConstant: (view.frame.width / 2) - 7).isActive = true
+        leftStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -5).isActive = true
         
         // Add imageViews to leftStackview
         for index in 0..<leftStackCount {
@@ -84,15 +85,15 @@ class HomeViewController: UIViewController {
             // Add main image
             let imageView = view.getImage(named: data[index])
             view.addSubview(imageView)
-            let titleLabel = view.getLabel(x: titleLabelPositionX, y: titleLabelPositionY, width: titleLabelWidth, height: titleLabelHeight, text: data[index], fontSize: 18)
+            let titleLabel = view.getLabel(x: titleLabelPositionX, y: titleLabelPositionY, width: titleLabelWidth, height: titleLabelHeight, text: data[index], fontSize: 19)
             view.addSubview(titleLabel)
         }
         
         view.addSubview(rightStackView)
-        rightStackView.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 10).isActive = true
-        rightStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
-        rightStackView.widthAnchor.constraint(equalToConstant: (view.frame.width / 2) - 15).isActive = true
-        rightStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10).isActive = true
+        rightStackView.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 5).isActive = true
+        rightStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -5).isActive = true
+        rightStackView.widthAnchor.constraint(equalToConstant: (view.frame.width / 2) - 7).isActive = true
+        rightStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -5).isActive = true
         
         // Add imageViews to rightStackview
         for index in 3..<rightStackCount {
@@ -100,7 +101,7 @@ class HomeViewController: UIViewController {
             rightStackView.addArrangedSubview(view)
             let imageView = view.getImage(named: data[index])
             view.addSubview(imageView)
-            let titleLabel = view.getLabel(x: titleLabelPositionX, y: titleLabelPositionY / 3, width: titleLabelWidth, height: titleLabelHeight, text: data[index], fontSize: 18)
+            let titleLabel = view.getLabel(x: titleLabelPositionX, y: titleLabelPositionY / 3, width: titleLabelWidth, height: titleLabelHeight, text: data[index], fontSize: 19)
             view.addSubview(titleLabel)
             
             // Add live feed image
