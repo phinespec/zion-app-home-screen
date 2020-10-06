@@ -17,11 +17,16 @@ class MapCell: UITableViewCell {
         addSubview(mapImageView)
         addSubview(mapTitleLabel)
         
-        configureMapImageView()
+        //configureMapImageView()
+        configureMapTitleLabel()
     }
     
     required init?(coder: NSCoder) {
         fatalError("Init(coder: has not been implemented")
+    }
+    
+    func set(map: Map) {
+        mapTitleLabel.text = map.title
     }
     
     func configureMapImageView() {
@@ -38,6 +43,12 @@ class MapCell: UITableViewCell {
     func configureMapTitleLabel() {
         mapTitleLabel.numberOfLines = 0
         mapTitleLabel.adjustsFontSizeToFitWidth = true
+        
+        mapTitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        mapTitleLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        mapTitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
+        mapTitleLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        mapTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
     }
 
 }

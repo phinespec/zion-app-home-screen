@@ -11,11 +11,14 @@ class MapViewController: UIViewController {
     
     var mapView = RectangleView()
     var tableView = UITableView()
+    
+    var maps = [Map]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Map Details"
         view.backgroundColor = .white
+        maps = fetchData()
         configureTableView()
         configureMapView()
     }
@@ -26,10 +29,10 @@ class MapViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = 50
+        tableView.rowHeight = 60
         tableView.register(MapCell.self, forCellReuseIdentifier: "MapCell")
         
-        // Add constraints
+        // Set constraints
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.heightAnchor.constraint(equalToConstant: view.frame.height / 2).isActive = true
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
@@ -61,13 +64,21 @@ class MapViewController: UIViewController {
 extension MapViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return maps.count
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MapCell") as! MapCell
+        let map = maps[indexPath.row]
+        cell.set(map: map)
+        return cell
+    }
+    
+    func fetchData() -> [Map]{
+        let map1 = Map(id: 0, title: "This is a test")
+        let map2 = Map(id: 1, title: "This is another test")
         
-        return UITableViewCell()
+        return [map1, map2]
     }
 }
