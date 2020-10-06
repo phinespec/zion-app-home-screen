@@ -6,12 +6,23 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MKMapViewDelegate {
     
-    var mapView = RectangleView()
-    var tableView = UITableView()
+    let zionLatitude = 37.317207
+    let zionLongitude = -113.022537
+    let regionInMeters: Double = 10_000
     
+    
+    var mapView: MKMapView = {
+        let mapView = MKMapView()
+        //mapView.setRegion()
+        return mapView
+    }()
+    let locationManager = CLLocationManager()
+    let tableView = UITableView()
     var maps = [Map]()
 
     override func viewDidLoad() {
@@ -21,6 +32,7 @@ class MapViewController: UIViewController {
         maps = fetchData()
         configureTableView()
         configureMapView()
+        checkLocationServices()
     }
     
     
@@ -44,6 +56,7 @@ class MapViewController: UIViewController {
     private func configureMapView() {
         view.addSubview(mapView)
         mapView.backgroundColor = .white
+        mapView.delegate = self
         
         // Set constraints
         mapView.translatesAutoresizingMaskIntoConstraints = false
@@ -52,10 +65,51 @@ class MapViewController: UIViewController {
         mapView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
         mapView.heightAnchor.constraint(equalToConstant: (view.frame.height / 2) - 10).isActive = true
         
-        let mapImage = mapView.getImage(named: "ZionMap")
-        mapView.addSubview(mapImage)
         
-        
+    }
+    
+    func setupLocationManager() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    }
+    
+    func centerViewOnUserLocation() {
+        if let location = locationManager.location?.coordinate {
+            let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+            mapView.setRegion(region, animated: true)
+        }
+    }
+    
+    func checkLocationServices() {
+        if CLLocationManager.locationServicesEnabled() {
+            setupLocationManager()
+            checkLocationAuthorization()
+            locationManager.startUpdatingLocation()
+        } else {
+            // Show alert letting the user know why they need to turn this on
+        }
+    }
+    
+    func checkLocationAuthorization() {
+        mapView.showsUserLocation = true
+        switch locationManager.authorizationStatus {
+        case .authorizedWhenInUse:
+            centerViewOnUserLocation()
+            break
+        case .denied:
+            // Show alert instructing how to turn on permissions
+            break
+        case .notDetermined:
+            locationManager.requestWhenInUseAuthorization()
+            break
+        case .restricted:
+            // Show an alert letting them know what's going on
+            break
+        case .authorizedAlways:
+            break
+        @unknown default:
+            break
+        }
     }
 
 
@@ -80,5 +134,19 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource {
         let map2 = Map(id: 1, title: "This is another test")
         
         return [map1, map2]
+    }
+}
+
+extension MapViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else { return }
+        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        let region = MKCoordinateRegion.init(center: center, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        // To be written
     }
 }
