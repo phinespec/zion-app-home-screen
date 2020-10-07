@@ -11,9 +11,9 @@ import CoreLocation
 
 class MapViewController: UIViewController, MKMapViewDelegate {
     
-    let zionLatitude = 37.317207
-    let zionLongitude = -113.022537
-    let regionInMeters: Double = 10_000
+    let zionLatitude = 37.198869
+    let zionLongitude = -112.989500
+    let regionInMeters: Double = 5_000
     
     
     var mapView: MKMapView = {
@@ -38,7 +38,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     private func configureTableView() {
         view.addSubview(tableView)
-        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 60
@@ -55,7 +54,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     private func configureMapView() {
         view.addSubview(mapView)
-        mapView.backgroundColor = .white
         mapView.delegate = self
         
         // Set constraints
@@ -95,7 +93,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         switch locationManager.authorizationStatus {
         case .authorizedWhenInUse:
             centerViewOnUserLocation()
-            break
+            locationManager.startUpdatingLocation()
         case .denied:
             // Show alert instructing how to turn on permissions
             break
@@ -140,13 +138,14 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource {
 extension MapViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else { return }
-        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+//        guard let location = locations.last else { return }
+//        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        let center = CLLocationCoordinate2D(latitude: zionLatitude, longitude: zionLongitude)
         let region = MKCoordinateRegion.init(center: center, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
-        
+        mapView.setRegion(region, animated: true)
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        // To be written
+        checkLocationAuthorization()
     }
 }

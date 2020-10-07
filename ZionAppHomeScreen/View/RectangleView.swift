@@ -9,6 +9,9 @@ import UIKit
 
 class RectangleView: UIView {
     
+    let tap = UITapGestureRecognizer(target: self, action: #selector(wasTapped))
+    
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
@@ -37,5 +40,7 @@ class RectangleView: UIView {
         return iv
     }
     
-    
+    @objc func wasTapped() {
+        print("view was tapped")
+    }
 }
