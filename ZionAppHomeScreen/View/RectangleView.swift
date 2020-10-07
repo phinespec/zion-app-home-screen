@@ -9,15 +9,26 @@ import UIKit
 
 class RectangleView: UIView {
     
-    let tap = UITapGestureRecognizer(target: self, action: #selector(wasTapped))
+    private var identifier = 0
+    private static var idSetter = 0
     
+    let data = AppData()
+    let view = HomeViewController()
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        configureTap()
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.identifier = RectangleView.getUniqueIdentier()
+        configureTap()
+    }
+    
+    private static func getUniqueIdentier() -> Int {
+        idSetter += 1
+        return idSetter
     }
     
     func getLabel(x: Int, y: Int, width: Int, height: Int, text: String, fontSize: Int) -> UILabel {
@@ -40,7 +51,17 @@ class RectangleView: UIView {
         return iv
     }
     
-    @objc func wasTapped() {
-        print("view was tapped")
+    private func configureTap() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(wasTapped(_:)))
+        tap.numberOfTapsRequired = 1
+        self.isUserInteractionEnabled = true
+        self.addGestureRecognizer(tap)
+    }
+    
+    @objc func wasTapped(_ sender: UITapGestureRecognizer) {
+        let vc = CustomVC()
+        view.present(vc, animated: true)
     }
 }
+
+
