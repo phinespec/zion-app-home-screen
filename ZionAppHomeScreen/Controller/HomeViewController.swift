@@ -22,18 +22,17 @@ class HomeViewController: UIViewController {
     private var titleLabelWidth = 200
     private var titleLabelHeight = 50
     
+    // Weather image frame configuration
+    private var weatherImagePositionX = 165
+    private var weatherImagePositionY = 40
+    private var weatherImageWidth = 25
+    private var weatherImageHeight = 25
+    
     // Weather label frame configuration
     private var weatherLabelPositionX = 170
     private var weatherLabelPositionY = 65
-    private var weatherLabelWidth = 20
-    private var weatherLabelHeight = 20
-    
-    // Weather image frame configuration
-    private var weatherImagePositionX = 170
-    private var weatherImagePositionY = 50
-    private var weatherImageWidth = 20
-    private var weatherImageHeight = 20
-    
+    private var weatherLabelWidth = 25
+    private var weatherLabelHeight = 25
     
     // Live feed image frame configuration
     private var liveFeedImagePositionX = 145
@@ -69,7 +68,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         view.isUserInteractionEnabled = true
         configureLeftStackView()
         configureRightStackView()
@@ -121,8 +120,10 @@ class HomeViewController: UIViewController {
             let liveFeed = view.getClearImage(named: "Livefeed", x: liveFeedImagePositionX, y: liveFeedImagePositionY, width: liveFeedImageWidth, height: liveFeedImageHeight)
             view.addSubview(liveFeed)
             
+            // Add weather icon
             if data[index] == "Weather" {
                 let weatherImage = view.getClearImage(named: "cloud.sun.rain", x: weatherImagePositionX, y: weatherImagePositionY, width: weatherImageWidth, height: weatherImageHeight)
+                weatherImage.tintColor = .white
                 view.addSubview(weatherImage)
                 let weatherLabel = view.getLabel(x: weatherLabelPositionX, y: weatherLabelPositionY, width: weatherLabelWidth, height: weatherLabelHeight, text: "75°", fontSize: 14)
                 view.addSubview(weatherLabel)
